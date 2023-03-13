@@ -1,0 +1,20 @@
+{
+  "name": "@noir-lang/barretenberg_browser_stopgap_wasm",
+  "version": "0.1.0-bbb7497",
+  "files": [
+    "nodejs",
+    "web",
+    "package.json"
+  ],
+  "main": "./nodejs/barretenberg_browser_stopgap_wasm.js",
+  "types": "./web/barretenberg_browser_stopgap_wasm.d.ts",
+  "module": "./web/barretenberg_browser_stopgap_wasm.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm.git"
+  },
+  "compiler": {
+    "versionHash": "bbb74973df49215f08b23aa5f9c76ae5c7310534"
+  }
+}
