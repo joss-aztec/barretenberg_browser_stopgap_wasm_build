@@ -265,6 +265,15 @@ module.exports.solve_intermediate_witness = function(circuit, initial_witness) {
     return takeObject(ret);
 };
 
+/**
+* @param {Map<any, any>} intermediate_witness
+* @returns {Uint8Array}
+*/
+module.exports.intermediate_witness_to_assignment_bytes = function(intermediate_witness) {
+    const ret = wasm.intermediate_witness_to_assignment_bytes(addHeapObject(intermediate_witness));
+    return takeObject(ret);
+};
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -591,17 +600,17 @@ module.exports.__wbindgen_function_table = function() {
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper142 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper146 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 144, __wbg_adapter_24);
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper144 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper148 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 144, __wbg_adapter_27);
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper146 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper150 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 144, __wbg_adapter_24);
     return addHeapObject(ret);
 };

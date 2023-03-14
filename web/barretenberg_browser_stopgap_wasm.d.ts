@@ -7,6 +7,11 @@
 */
 export function solve_intermediate_witness(circuit: Uint8Array, initial_witness: Map<any, any>): Map<any, any>;
 /**
+* @param {Map<any, any>} intermediate_witness
+* @returns {Uint8Array}
+*/
+export function intermediate_witness_to_assignment_bytes(intermediate_witness: Map<any, any>): Uint8Array;
+/**
 * A struct representing an aborted instruction execution, with a message
 * indicating the cause.
 */
@@ -19,6 +24,7 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly solve_intermediate_witness: (a: number, b: number) => number;
+  readonly intermediate_witness_to_assignment_bytes: (a: number) => number;
   readonly __wbg_wasmerruntimeerror_free: (a: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;

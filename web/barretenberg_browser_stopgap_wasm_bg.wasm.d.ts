@@ -2,6 +2,7 @@
 /* eslint-disable */
 export const memory: WebAssembly.Memory;
 export function solve_intermediate_witness(a: number, b: number): number;
+export function intermediate_witness_to_assignment_bytes(a: number): number;
 export function __wbg_wasmerruntimeerror_free(a: number): void;
 export function __wbindgen_malloc(a: number): number;
 export function __wbindgen_realloc(a: number, b: number, c: number): number;

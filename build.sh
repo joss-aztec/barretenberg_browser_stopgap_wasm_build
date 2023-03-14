@@ -42,4 +42,4 @@ AZTEC_BACKEND_REV_SHORT=$(git rev-parse --short HEAD)
 cd $main_dir
 sed -i -E "s/\[noir-lang\/aztec_backend@.+\]\(.+\)/\[noir-lang\/aztec_backend@$AZTEC_BACKEND_REV_SHORT\](https:\/\/github.com\/noir-lang\/aztec_backend\/tree\/$AZTEC_BACKEND_REV)/g" ./README.md
 
-cat ./package.json | jq '.repository = { "type" : "git", "url" : "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm.git" }' | jq ".compiler = { \"versionHash\" : \"$AZTEC_BACKEND_REV\" }" | tee ./package.json
+cat ./package.json | jq '.repository = { "type" : "git", "url" : "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm_build.git" }' | jq ".compiler = { \"versionHash\" : \"$AZTEC_BACKEND_REV\" }" | tee ./package.json
