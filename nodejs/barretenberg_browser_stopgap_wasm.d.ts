@@ -12,6 +12,11 @@ export function solve_intermediate_witness(circuit: Uint8Array, initial_witness:
 */
 export function intermediate_witness_to_assignment_bytes(intermediate_witness: Map<any, any>): Uint8Array;
 /**
+* @param {Uint8Array} circuit
+* @returns {Uint8Array}
+*/
+export function acir_to_constraints_system(circuit: Uint8Array): Uint8Array;
+/**
 * A struct representing an aborted instruction execution, with a message
 * indicating the cause.
 */
