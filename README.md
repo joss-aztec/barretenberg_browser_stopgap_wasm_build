@@ -2,4 +2,4 @@
 
 ## Tracks
 
-Aztec Backend Repository [noir-lang/aztec_backend@9b059ce](https://github.com/noir-lang/aztec_backend/tree/9b059ce7d25d4ef90408293a483f50ff218ddd38)
+Aztec Backend Repository [noir-lang/aztec_backend@8f535e7](https://github.com/noir-lang/aztec_backend/tree/8f535e7e573262f0e4e8a5f9f1dd6b84888fc9fc)
