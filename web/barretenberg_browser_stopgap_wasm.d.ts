@@ -17,6 +17,11 @@ export function intermediate_witness_to_assignment_bytes(intermediate_witness: M
 */
 export function acir_to_constraints_system(circuit: Uint8Array): Uint8Array;
 /**
+* @param {Uint8Array} circuit
+* @returns {number}
+*/
+export function public_input_length(circuit: Uint8Array): number;
+/**
 * A struct representing an aborted instruction execution, with a message
 * indicating the cause.
 */
@@ -31,6 +36,7 @@ export interface InitOutput {
   readonly solve_intermediate_witness: (a: number, b: number) => number;
   readonly intermediate_witness_to_assignment_bytes: (a: number) => number;
   readonly acir_to_constraints_system: (a: number) => number;
+  readonly public_input_length: (a: number) => number;
   readonly __wbg_wasmerruntimeerror_free: (a: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;

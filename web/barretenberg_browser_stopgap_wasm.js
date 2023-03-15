@@ -280,6 +280,15 @@ export function acir_to_constraints_system(circuit) {
     return takeObject(ret);
 }
 
+/**
+* @param {Uint8Array} circuit
+* @returns {number}
+*/
+export function public_input_length(circuit) {
+    const ret = wasm.public_input_length(addHeapObject(circuit));
+    return takeObject(ret);
+}
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -586,15 +595,15 @@ function getImports() {
         const ret = wasm.__wbindgen_export_2;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper329 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
-        return addHeapObject(ret);
-    };
-    imports.wbg.__wbindgen_closure_wrapper331 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
-        return addHeapObject(ret);
-    };
     imports.wbg.__wbindgen_closure_wrapper333 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
+        return addHeapObject(ret);
+    };
+    imports.wbg.__wbindgen_closure_wrapper335 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
+        return addHeapObject(ret);
+    };
+    imports.wbg.__wbindgen_closure_wrapper337 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_29);
         return addHeapObject(ret);
     };

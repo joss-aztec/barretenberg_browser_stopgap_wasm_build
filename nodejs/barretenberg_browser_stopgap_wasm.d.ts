@@ -17,6 +17,11 @@ export function intermediate_witness_to_assignment_bytes(intermediate_witness: M
 */
 export function acir_to_constraints_system(circuit: Uint8Array): Uint8Array;
 /**
+* @param {Uint8Array} circuit
+* @returns {number}
+*/
+export function public_input_length(circuit: Uint8Array): number;
+/**
 * A struct representing an aborted instruction execution, with a message
 * indicating the cause.
 */
