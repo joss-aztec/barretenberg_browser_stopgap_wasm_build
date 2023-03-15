@@ -1,6 +1,6 @@
 {
   "name": "@noir-lang/barretenberg_browser_stopgap_wasm",
-  "version": "0.1.0-b5efdc4",
+  "version": "0.1.0-6488cb7",
   "files": [
     "nodejs",
     "web",
@@ -15,6 +15,6 @@
     "url": "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm_build.git"
   },
   "compiler": {
-    "versionHash": "b5efdc42f18b0579a0ee679d9aa4ed10be1502c0"
+    "versionHash": "6488cb71a1c84186ab2a12be8af7d0f41908b357"
   }
 }

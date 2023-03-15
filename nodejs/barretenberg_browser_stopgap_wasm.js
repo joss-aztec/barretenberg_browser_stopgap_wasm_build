@@ -292,6 +292,15 @@ module.exports.public_input_length = function(circuit) {
     return takeObject(ret);
 };
 
+/**
+* @param {Map<any, any>} public_witness
+* @returns {Uint8Array}
+*/
+module.exports.public_input_as_bytes = function(public_witness) {
+    const ret = wasm.public_input_as_bytes(addHeapObject(public_witness));
+    return takeObject(ret);
+};
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -618,17 +627,17 @@ module.exports.__wbindgen_function_table = function() {
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper333 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper336 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper335 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper338 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
     return addHeapObject(ret);
 };
 
-module.exports.__wbindgen_closure_wrapper337 = function(arg0, arg1, arg2) {
+module.exports.__wbindgen_closure_wrapper340 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_29);
     return addHeapObject(ret);
 };

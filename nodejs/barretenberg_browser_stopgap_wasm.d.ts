@@ -22,6 +22,11 @@ export function acir_to_constraints_system(circuit: Uint8Array): Uint8Array;
 */
 export function public_input_length(circuit: Uint8Array): number;
 /**
+* @param {Map<any, any>} public_witness
+* @returns {Uint8Array}
+*/
+export function public_input_as_bytes(public_witness: Map<any, any>): Uint8Array;
+/**
 * A struct representing an aborted instruction execution, with a message
 * indicating the cause.
 */

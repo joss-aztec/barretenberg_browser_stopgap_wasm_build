@@ -289,6 +289,15 @@ export function public_input_length(circuit) {
     return takeObject(ret);
 }
 
+/**
+* @param {Map<any, any>} public_witness
+* @returns {Uint8Array}
+*/
+export function public_input_as_bytes(public_witness) {
+    const ret = wasm.public_input_as_bytes(addHeapObject(public_witness));
+    return takeObject(ret);
+}
+
 function handleError(f, args) {
     try {
         return f.apply(this, args);
@@ -595,15 +604,15 @@ function getImports() {
         const ret = wasm.__wbindgen_export_2;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper333 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper336 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper335 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper338 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_24);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper337 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper340 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 141, __wbg_adapter_29);
         return addHeapObject(ret);
     };
