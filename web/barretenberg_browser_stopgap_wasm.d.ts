@@ -3,9 +3,10 @@
 /**
 * @param {Uint8Array} circuit
 * @param {Map<any, any>} initial_witness
-* @returns {Map<any, any>}
+* @param {Function} witness_loader
+* @returns {Promise<Map<any, any>>}
 */
-export function solve_intermediate_witness(circuit: Uint8Array, initial_witness: Map<any, any>): Map<any, any>;
+export function solve_intermediate_witness(circuit: Uint8Array, initial_witness: Map<any, any>, witness_loader: Function): Promise<Map<any, any>>;
 /**
 * @param {Map<any, any>} intermediate_witness
 * @returns {Uint8Array}
@@ -38,7 +39,7 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly solve_intermediate_witness: (a: number, b: number) => number;
+  readonly solve_intermediate_witness: (a: number, b: number, c: number) => number;
   readonly intermediate_witness_to_assignment_bytes: (a: number) => number;
   readonly acir_to_constraints_system: (a: number) => number;
   readonly public_input_length: (a: number) => number;
@@ -47,11 +48,13 @@ export interface InitOutput {
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
+  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h4291d3861e091a5f: (a: number, b: number, c: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h51a0e0a07b8558b3: (a: number, b: number, c: number, d: number) => void;
   readonly _dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0f0ebb82ba4a23df: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_free: (a: number, b: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
+  readonly wasm_bindgen__convert__closures__invoke2_mut__hab9d02d37d9a9102: (a: number, b: number, c: number, d: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

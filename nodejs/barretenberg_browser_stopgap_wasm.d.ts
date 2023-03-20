@@ -3,9 +3,10 @@
 /**
 * @param {Uint8Array} circuit
 * @param {Map<any, any>} initial_witness
-* @returns {Map<any, any>}
+* @param {Function} witness_loader
+* @returns {Promise<Map<any, any>>}
 */
-export function solve_intermediate_witness(circuit: Uint8Array, initial_witness: Map<any, any>): Map<any, any>;
+export function solve_intermediate_witness(circuit: Uint8Array, initial_witness: Map<any, any>, witness_loader: Function): Promise<Map<any, any>>;
 /**
 * @param {Map<any, any>} intermediate_witness
 * @returns {Uint8Array}
