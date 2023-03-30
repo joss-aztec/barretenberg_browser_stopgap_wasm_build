@@ -1,20 +1,20 @@
 {
-  "name": "@noir-lang/barretenberg_browser_stopgap_wasm",
-  "version": "0.1.0-6488cb7",
+  "name": "@noir-lang/aztec_backend_wasm",
+  "version": "0.1.0-4488289",
   "files": [
     "nodejs",
     "web",
     "package.json"
   ],
-  "main": "./nodejs/barretenberg_browser_stopgap_wasm.js",
-  "types": "./web/barretenberg_browser_stopgap_wasm.d.ts",
-  "module": "./web/barretenberg_browser_stopgap_wasm.js",
+  "main": "./nodejs/aztec_backend_wasm.js",
+  "types": "./web/aztec_backend_wasm.d.ts",
+  "module": "./web/aztec_backend_wasm.js",
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm_build.git"
+    "url": "https://github.com/joss-aztec/aztec_backend_wasm_build.git"
   },
   "compiler": {
-    "versionHash": "6488cb71a1c84186ab2a12be8af7d0f41908b357"
+    "versionHash": "4488289373f577c70940d05fee4457f039dcc1c7"
   }
 }

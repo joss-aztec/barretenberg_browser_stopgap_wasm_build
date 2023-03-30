@@ -22,18 +22,18 @@ fi
 
 cp -a "$AZTEC_BACKEND_REPO_CACHE/." "$AZTEC_BACKEND_BUILD/"
 
-cd "$AZTEC_BACKEND_BUILD/barretenberg_browser_stopgap_wasm"
+cd "$AZTEC_BACKEND_BUILD/aztec_backend_wasm"
 
-./build-barretenberg-browser-stopgap-wasm
+./build-aztec-backend-wasm
 cd $main_dir
 
 rm -rf ./nodejs
 rm -rf ./web
 rm package.json
 
-cp -a "$AZTEC_BACKEND_BUILD/barretenberg_browser_stopgap_wasm/pkg/nodejs/." ./nodejs
-cp -a "$AZTEC_BACKEND_BUILD/barretenberg_browser_stopgap_wasm/pkg/web/." ./web
-cp "$AZTEC_BACKEND_BUILD/barretenberg_browser_stopgap_wasm/pkg/package.json" ./
+cp -a "$AZTEC_BACKEND_BUILD/aztec_backend_wasm/pkg/nodejs/." ./nodejs
+cp -a "$AZTEC_BACKEND_BUILD/aztec_backend_wasm/pkg/web/." ./web
+cp "$AZTEC_BACKEND_BUILD/aztec_backend_wasm/pkg/package.json" ./
 
 cd $AZTEC_BACKEND_BUILD
 AZTEC_BACKEND_REV=$(git rev-parse HEAD)
@@ -42,4 +42,4 @@ AZTEC_BACKEND_REV_SHORT=$(git rev-parse --short HEAD)
 cd $main_dir
 sed -i -E "s/\[noir-lang\/aztec_backend@.+\]\(.+\)/\[noir-lang\/aztec_backend@$AZTEC_BACKEND_REV_SHORT\](https:\/\/github.com\/noir-lang\/aztec_backend\/tree\/$AZTEC_BACKEND_REV)/g" ./README.md
 
-cat ./package.json | jq '.repository = { "type" : "git", "url" : "https://github.com/joss-aztec/barretenberg_browser_stopgap_wasm_build.git" }' | jq ".compiler = { \"versionHash\" : \"$AZTEC_BACKEND_REV\" }" | tee ./package.json
+cat ./package.json | jq '.repository = { "type" : "git", "url" : "https://github.com/joss-aztec/aztec_backend_wasm_build.git" }' | jq ".compiler = { \"versionHash\" : \"$AZTEC_BACKEND_REV\" }" | tee ./package.json
