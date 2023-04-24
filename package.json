@@ -1,6 +1,6 @@
 {
   "name": "@noir-lang/aztec_backend_wasm",
-  "version": "0.1.0-facb6fe",
+  "version": "0.1.0-06f13cf",
   "files": [
     "nodejs",
     "web",
@@ -15,6 +15,6 @@
     "url": "https://github.com/joss-aztec/aztec_backend_wasm_build.git"
   },
   "compiler": {
-    "versionHash": "facb6fe079884281cf4b1d6bc03184e0f7894f04"
+    "versionHash": "06f13cfdbf3dad6b99316576a0b205999fb00eb9"
   }
 }
